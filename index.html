@@ -1,20 +1,194 @@
-<html>
-    <head>
-        <title>Grill</title>
-        <style>
-            img{
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                margin: auto;
-                max-width: 100%;
-                max-height: 100%;
-            }
-        </style>
-    </head>
-    <body>
-            <img src="./logo.png">
-    </body>
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Grill</title>
+<meta name="viewport" content="width=750">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+
+<link href="resources/css/base.css" media="all" rel="stylesheet">
+<link rel="icon" href="/favicon.png">
+<link rel="shortcut icon" href="/favicon.ico">
+
+<script src="resources/js/viewport.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="//maps.google.com/maps/api/js?key=AIzaSyDUlFY_zej6HzeRFq7kfgN33hogdKORTN0"></script>
+<script src="resources/js/base.js"></script>
+
+<!--[if lt IE 9]>
+<script src="/resources/js/html5shiv.min.js"></script>
+<script src="/resources/js/IE9.js"></script>
+<![endif]-->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150519504-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'UA-150519504-1');
+</script>
+
+</head>
+<body id="PageTop" class="home">
+
+
+<header>
+	<h1><a href="#PageTop"><img src="resources/images/base/logo.svg" alt="Grill"></a></h1>
+
+	<nav class="menu">
+		<ul>
+			<li><a href="#SecHome"><span>HOME</span>ホーム</a></li>
+            <li><a href="#SecAbout"><span>ABOUT US</span>私たちについて</a></li>
+            <li><a href="#SecStrength"><span>OUR STRENGTH</span>私たちの強み</a></li>
+            <li><a href="#SecService"><span>SERVICE</span>サービス</a></li>
+            <li><a href="#SecCompany"><span>COMPANY OUTLINE</span>会社概要</a></li>
+            <li><a href="#SecContact"><span>CONTACT</span>お問い合わせ</a></li>
+		</ul>
+	</nav>
+</header>
+
+
+
+<main>
+
+    <section id="SecHome">
+        <article class="topics">
+            <a href="">
+                <time datetime="2019-10-25">2019.10.25</time>
+                <p>株式会社グリルを設立しました。</p>
+            </a>
+        </article>
+    </section>
+
+
+    <section id="SecAbout">
+        <article class="sec inner">
+            <h2><span>ABOUT US</span>私たちについて</h2>
+            <p><strong>
+                <img src="resources/images/about/text_pc.svg" alt="マーケティングの可能性を広げるユーザーコンテンツを提供する・" class="hiddenSp">
+                <img src="resources/images/about/text_sp.svg" alt="マーケティングの可能性を広げるユーザーコンテンツを提供する・" class="hiddenPc">
+            </strong></p>
+            <p>株式会社Grillは、<br>まだ活用されていない生活者の声や情報を用いて<br>企業のマーケティング活動を支援する会社です。</p>
+        </article>
+    </section>
+
+
+    <section id="SecStrength">
+        <article class="sec inner">
+            <h2><span>OUR STRENGTH</span>私たちの強み</h2>
+            <p><strong><img src="resources/images/strength/gunocy.svg" alt="Gunosy"></strong><strong><img src="resources/images/strength/ssu.svg" alt="SUNNY SIDE UP"></strong></p>
+            <p>情報キュレーションサービスを提供する <br class="brkSp">Gunosy の「データ力」と<br>
+            マーケティングコミュニケーション会社である <br class="brkSp">SUNNY SIDE UP の「企画力」で<br>
+            より価値の高い情報を的確に<br class="brkSp">生活者に届けることを<br class="brkSp">目指していきます。</p>
+        </article>
+    </section>
+
+
+    <section id="SecService">
+        <article class="sec">
+            <h2 class="inner"><span>SERVICE</span>サービス</h2>
+            <ul class="service__list">
+                <li>
+                    <div class="inner">
+                        <h3><span>Marketing <br class="brkSp">Research </span>マーケティングリサーチ事業</h3>
+                        <p>広い属性のユーザーを持つグノシーを活用した<br>
+                        マーケティングリサーチにより、<br>
+                        企業や自治体などのマーケティング活動を<br>
+                        迅速かつ正確にサポートいたします。</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="inner">
+                        <h3><span>Live<br class="brkSp"> Marketing</span> ライブマーケティング事業</h3>
+                        <p>ユーザー参加型の番組配信事業で、<br>
+                        消費者のリアルな反応により<br>
+                        狙ったタイミングに大きな盛り上がりを<br>
+                        作るマーケティングを行います。</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="inner">
+                        <h3><span>Influencer <br class="brkSp">Marketing</span> インフルエンサーマーケティング事業</h3>
+                        <p>発信価値の高い情報を持った<br>
+                        “個人”のコンテンツ企画や制作、<br>
+                        コミュニケーションサポートを行います。</p>
+                    </div>
+                </li>
+            </ul>
+        </article>
+    </section>
+
+
+    <section id="SecCompany">
+        <article class="sec inner">
+            <h2><span>COMPANY OUTLINE</span>会社概要</h2>
+            <dl class="outline__list">
+                <dt>商号</dt>
+                <dd>株式会社グリル / Grill Inc.</dd>
+                <dt>設立日</dt>
+                <dd>2019年10月25日</dd>
+                <dt>資本金</dt>
+                <dd>5,000万円</dd>
+                <dt>代表取締役社長</dt>
+                <dd>岩館 大地</dd>
+                <dt>株主</dt>
+                <dd>株式会社Gunosy<br>
+                株式会社サニーサイドアップ</dd>
+                <dt>所在地</dt>
+                <dd>〒107-6016<br>
+                東京都港区赤坂1-12-32 アーク森ビル<br>
+                TEL : 03-6455-4196 / FAX : 03-6455-4563</dd>
+            </dl>
+            <figure id="OfficeMap"></figure>
+        </article>
+    </section>
+
+
+    <section id="SecContact">
+        <article class="sec inner">
+            <h2><span>CONTACT</span>お問い合わせ</h2>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScZBEw9K-Srbus0pa2ZVcKfyEHKXFluLQrOu5UqAni70AsklQ/viewform?embedded=true" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます...</iframe>
+            <span class="privacyBtn moadlBtn">PRIVACY POLICY</span>
+        </article>
+    </section>
+
+    <section class="privacy moadlCont">
+        <h2><span>Privacy Policy </span>プライバシーポリシー</h2>
+        <p>＜ダミー文章です＞株式会社 Gunosy(以下「当社」)は、当社事業である「情報キュレーションサービス」の事業体とし て、社会に寄与する企業として個人情報の適切な取扱いに規範を示すべき立場にあるとの理念の下、個人 情報を適切に取り扱うことの重要性を認識し、個人情報保護方針を定め、役員及び従業員が一体となって これを遵守し、もって個人情報の保護及び個人の権利利益の保護に万全を尽くしてまいります。</p>
+        <ol>
+            <li>個人情報を取得するに当たっては、その利用目的をできる限り特定し、その目的の達成に必要な 限度において個人情報を取得致します。</li>
+            <li>個人情報を、本人から直接、書面によって取得する場合には、弊社名、個人情報保護管理者名及 び連絡先、利用目的等をお知らせした上で、必要な範囲で個人情報を取得致します。</li>
+            <li>個人情報の利用は、本人が同意を与えた利用目的の範囲内で行います。また、目的外利用を行わ ないため、必要な対策を講じる手順を確立し、実施致します。</li>
+            <li>保有する個人情報を適切な方法で管理し、本人の同意なしに第三者に開示・提供致しません。</li>
+            <li>保有する個人情報を利用目的に応じた必要な範囲内において、正確、かつ、最新の状態で管理し、個人情報の漏えい、滅失又は毀損などのおそれに対して、合理的な安全対策を講じ、予防並びに是正に努めます。</li>
+            <li>個人情報の処理を外部へ委託する場合は、漏えいや第三者への提供を行わない等を契約により義務づけ、委託先に対する適切な管理を実施致します。</li>
+            <li>保有する個人情報についての苦情・相談は、弊社の問合せ窓口に連絡頂くことにより、これに対応致します。</li>
+        </ol>
+        <dl class="info">
+            <dt>◎個人情報保護方針についてのお問合せ先</dt>
+            <dd>〒107-6016 東京都港区赤坂1-12-32 アーク森ビル</dd>
+            <dd>株式会社 Grill 個人情報相談受付窓口</dd>
+            <dd>MAIL : <a href="mailto:dummy@grill.jp">dummy@grill.jp</a></dd>
+        </dl>
+        <dl class="sign">
+            <dt>制定日 : 2019年10月25日</dt>
+            <dd>株式会社 Grill</dd>
+            <dd>代表取締役社長 岩館 大地</dd>
+        </dl>
+    </section>
+
+
+</main>
+
+
+
+<footer>
+  <p class="copy">&copy; Grill INC.</p>
+</footer>
+
+
+</body>
 </html>
