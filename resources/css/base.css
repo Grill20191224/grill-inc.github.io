@@ -7,7 +7,8 @@
 
 @import url('//fonts.googleapis.com/css?family=Noto+Sans+JP:100,300,400,500,700,900');
 @import url('//fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i&display=swap');
-
+@import 'slick.css';
+@import 'slick-theme.css';
 
 /* reset
 --------------------------------------------- */
@@ -161,6 +162,7 @@ a,input[type="submit"] {
 ---------------------------------*/
 a:hover img,
 .menu a:hover,
+.content__list a:hover,.aside__cont a:hover,
 .btn a:hover,
 .topics a:hover,
 input[type="button"]:hover {
@@ -392,7 +394,7 @@ main > section#SecHome {
     left: 0;
     background: #f3f3f4;
 }
-.topics:after {
+.topics:before {
     display: block;
     position: absolute;
     top: 0;
@@ -401,7 +403,7 @@ main > section#SecHome {
     height: 10em;
     background: #e0da41;
 }
-.topics a {
+.topics > div {
     display: block;
     position: relative;
     z-index: 10;
@@ -409,7 +411,7 @@ main > section#SecHome {
     color: #666;
     font-size: 0;
 }
-.topics a * {
+.topics > div * {
     letter-spacing: 0.05em;
     font-size: 13px;
 }
@@ -424,11 +426,137 @@ main > section#SecHome {
     text-align: center;
 }
 .topics p {
+    width: 611px;
     padding-left: 20px;
-    padding-right: 20px;
 }
 .topics a:hover {
     background: rgba(255,255,255,.5);
+}
+
+/*--slick-slide--*/
+#SecHome .topics {
+    display: none;
+    width: 830px;
+    height: auto;
+    padding-right: 60px;
+}
+.topics .slick-slide {
+    float: none !important;
+    display: inline-block;
+    vertical-align: middle;
+    width: 770px;
+	margin: 0;
+	padding: 0;
+}
+.topics .slick-arrow {
+	display: block;
+	position: absolute;
+	z-index: 15;
+	top: 50%;
+    border: none;
+    background: none;
+	text-indent: -9999em;
+    cursor: pointer
+}
+.topics .slick-arrow {
+	width: 0;
+    height: 0;
+    border-style: solid;
+    margin-top: -6px;
+}
+.topics .slick-arrow.slick-prev {
+    right: 40px;
+	border-width: 6px 13px 6px 0;
+    border-color: transparent #999 transparent transparent;
+}
+.topics .slick-arrow.slick-next {
+    right: 21px;
+    border-width: 6px 0 6px 14px;
+    border-color: transparent transparent transparent #999;
+}
+.topics .slick-dots {
+	display: none;
+}
+
+/*===================================
+    SecAsideContent
+=====================================*/
+#SecAsideContent {
+    min-width: 1120px;
+    padding: 44px 0;
+    border-bottom: solid 1px #ccc;
+    text-align: center;
+}
+.content__list {
+    margin: auto;
+}
+.content__list li {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    width: 480px;
+    height: 151px;
+    margin: 0 10px;
+    padding: 40px 0 40px 34px;
+    box-shadow: 2px 2px 0 0 rgba(0,0,0,.16);
+    letter-spacing: -.40em;
+    text-align: left;
+}
+.content__list li.contentGutele {
+    background: #EBE42C;
+}
+.content__list li.contentGutele a {
+    color: #000;
+}
+.content__list li.contentResearch {
+    background: #0D1031;
+}
+.content__list li.contentResearch a {
+    color: #fff;
+}
+.content__list b {
+    display: block;
+    position: absolute;
+    top: -23px;
+    width: 70px;
+    height: 70px;
+    background: no-repeat 0 0;
+    background-size: 70px 70px;
+    text-align: left;
+    text-indent: -9999em;
+}
+.content__list .contentGutele b {
+    left: -17px;
+    background-image: url("../images/content/new1.svg"); 
+}
+.content__list .contentResearch b {
+    left: -11px;
+    background-image: url("../images/content/new2.svg"); 
+}
+.content__list h2,.content__list p {
+    display: inline-block;
+    vertical-align: middle;
+    letter-spacing: 0.05em;
+}
+.content__list h2 {
+    width: 225px;
+    letter-spacing: normal;
+}
+.content__list .contentGutele h2 img[src$=".svg"] {
+    width: 214px;
+    height: auto;
+}
+.content__list .contentResearch h2 img[src$=".svg"] {
+    width: 200px;
+    height: auto;
+}
+.content__list p {
+    width: 210px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+.content__list p br {
+    display: inline-block;
 }
 
 /*===================================
@@ -523,8 +651,8 @@ main > section#SecHome {
     background-size: 332px auto;
 }
 .service__list li:nth-of-type(2) div:before {
-    background: url("../images/service/illust2.svg") no-repeat 173px 50%;
-    background-size: 271px auto;
+    background: url("../images/service/illust2.svg") no-repeat 114px 175px;
+    background-size: 385px 269px;
 }
 .service__list li:nth-of-type(3) div:before {
     top: inherit;
@@ -536,6 +664,53 @@ main > section#SecHome {
 .service__list div * {
     position: relative;
     z-index: 10;
+}
+
+div.aside__cont:before {
+    display: none;
+}
+.aside__cont {
+    margin-top: 75px;
+    padding: 30px 0 30px 34px;
+    box-shadow: 2px 2px 0 0 rgba(0,0,0,.16);
+    letter-spacing: -.40em;
+}
+.aside__cont.contentResearch {
+    padding: 50px 0 50px 34px;
+    background: #333;
+}
+.aside__cont.contentResearch a {
+    color: #fff;
+}
+.aside__cont.contentGutele {
+    background: #EBE42C;
+}
+.aside__cont.contentGutele a {
+    color: #000;
+}
+.aside__cont h2,.aside__cont p {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+    letter-spacing: 0.05em;
+}
+.aside__cont h2 {
+    width: 210px;
+    font-size: 32px;
+    line-height: 1.2;
+}
+.aside__cont.contentGutele h2 img[src$=".svg"] {
+    width: 190px;
+    height: auto;
+}
+.aside__cont.contentResearch h2 img[src$=".svg"] {
+    width: 174px;
+    height: auto;
+}
+.aside__cont p {
+    width: calc( 100% - 210px );
+    font-size: 15px;
+    line-height: 1.6;
 }
 
 /*===================================
@@ -707,7 +882,6 @@ input[type="button"] {
     text-decoration: none;
 }
 
-
 /*  moadlCont
 ---------------------------------*/
 .moadlCont {
@@ -826,7 +1000,7 @@ input[type="button"] {
 /************************************************************************************
 smaller than 750px
 *************************************************************************************/
-@media screen and (max-device-width: 660px) {
+@media screen and (max-device-width: 750px) {
 	
 	.hiddenPc,
 	.brkSp {
@@ -876,6 +1050,7 @@ smaller than 750px
     ---------------------------------*/
     a:hover img,
     .menu a:hover,
+    .content__list a:hover,.aside__cont a:hover,
     .btn a:hover,
     .topics a:hover,
     input[type="button"]:hover {
@@ -1029,26 +1204,76 @@ smaller than 750px
         background-position-y: calc(50% - 64px);
         background-size: auto auto, 500px auto;
     }
-    .topics:after {
-        width: 260px;
+    .topics:before {
+        width: 250px;
     }
-    .topics a * {
+    .topics > div * {
         font-size: 26px;
     }
     .topics time,.topics p {
-        padding: 30px 0;
+        padding: 30px 0 30px;
         font-size: 26px;
     }
     .topics time {
-        width: 260px;
+        width: 250px;
     }
     .topics p {
-        width: 490px;
+        width: 410px;
         padding-left: 40px;
-        padding-right: 40px;
     }
     .topics a:hover {
         background: none;
+    }
+    #SecHome .topics {
+        width: 750px;
+        height: auto;
+    }
+    .topics .slick-slide {
+        width: 690px;
+    }
+    .topics .slick-arrow {
+        transform:scale(2);
+    }
+    .topics .slick-arrow.slick-prev {
+        right: 56px;
+    }
+    .topics .slick-arrow.slick-next {
+        right: 20px;
+    }
+    
+    /*===================================
+       SecAsideContent
+    =====================================*/
+    #SecAsideContent {
+        min-width: inherit;
+        padding: 60px 0 20px;
+    }
+    .content__list li {
+        display: block;
+        width: 650px;
+        height: auto;
+        margin: 0 auto 40px;
+        padding: 40px 0 40px 50px;
+    }
+    .content__list li,.content__list li a {
+        color: #fff;
+    }
+    .content__list .contentGutele b,.content__list .contentResearch b {
+        top: -25px;
+        left: -35px;
+        width: 100px;
+        height: 100px;
+        background-size: 100px 100px;
+    }
+    .content__list h2 {
+        width: 250px;
+        font-size: 40px;
+        line-height: 1.2;
+    }
+    .content__list p {
+        width: 330px;
+        font-size: 22px;
+        line-height: 1.6;
     }
     
     /*===================================
@@ -1106,24 +1331,29 @@ smaller than 750px
         border-top-width: 2px;
     }
     .service__list div.inner {
-        padding: 100px 50px 420px;
+        padding: 100px 50px 50px;
     }
     .service__list li:nth-of-type(3) div.inner {
         padding-bottom: 400px;
+    }
+    .sec .service__list li:nth-of-type(3) h3 span {
+        font-size: 78px;
+        letter-spacing: 0.08em;
     }
     .service__list p {
         min-height: 8em;
     }
     .service__list li:nth-of-type(1) div:before {
-        top: inherit;
-        bottom: 0;
+        top: 430px;
+        height: 576px;
         height: 576px;
         background-position: 100% 0;
         background-size: 520px auto;
     }
     .service__list li:nth-of-type(2) div:before {
-        background-position: 50px 544px;
-        background-size: 454px auto;
+        top: 875px;
+        background-position: 50px 0;
+        background-size: 630px auto;
     }
     .service__list li:nth-of-type(3) div:before {
         left: inherit;
@@ -1132,6 +1362,28 @@ smaller than 750px
         height: 520px;
         background-position: 0 0;
         background-size: 650px auto;
+    }
+    .aside__cont,.aside__cont.contentResearch {
+        margin-top: 400px;
+        padding: 40px;
+    }
+    .aside__cont h2,.aside__cont p {
+        display: block;
+    }
+    .aside__cont h2,.aside__cont.contentResearch h2  {
+        width: auto;
+        margin-bottom: 25px;
+    }
+    .aside__cont.contentGutele h2 img[src$=".svg"] {
+        width: 247px;
+    }
+    .aside__cont.contentResearch h2 img[src$=".svg"] {
+        width: 226px;
+    }
+    .aside__cont p,.aside__cont.contentResearch p {
+        width: auto;
+        min-height: inherit;
+        font-size: 24px;
     }
     
     /*===================================

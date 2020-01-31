@@ -183,8 +183,21 @@ jQuery(function($){
 	}
 });
 
-
- 
+//*-- topics --------------------------------*
+jQuery(function ($) {
+    $( document ).ready(function( $ ) {
+        $('.topics').css('display', 'block');
+				$('.topics').slick({
+					dots: false,
+					infinite: true,
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					autoplay: false,
+                    fade: true,
+					autoplaySpeed: 5000
+				});
+		});
+});
 
 jQuery(function ($) {
     //*-- check --------------------------------*
