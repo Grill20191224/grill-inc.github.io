@@ -38,6 +38,18 @@ jQuery(function($){
 		return false;
     });
     
+    //*-- ボタンフッターまでいったら消す --------------------------------*
+    $(window).scroll(function () {
+        var bottomPos = 30;
+        var scrollHeight = $(document).height();
+        var scrollPosition = $(window).height() + $(window).scrollTop();
+        if (scrollPosition > scrollHeight - bottomPos) {
+            $('.btn.circle').fadeOut(100);
+        } else {
+            $('.btn.circle').fadeIn(100);
+        }
+    });
+    
     //*-- privacy modal --------------------------------*
     var current_scrollY;
     $('.privacy__modal').css('display', 'none');

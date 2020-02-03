@@ -266,7 +266,7 @@ a:hover img,
 .cont__header h1 {
     position: relative;
 	background: #ebe42c;
-    height: calc( 100vh - 130px);
+    height: 710px;
 }
 .cont__header h1 img[src$=".svg"] {
     position: absolute;
