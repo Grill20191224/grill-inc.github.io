@@ -740,11 +740,11 @@ a:hover img,
     text-indent: -9999em;
 }
 .footer p {
-    width: 661px;
-    height: 18px;
+    width: 637px;
+    height: 24px;
     margin: 0 auto 62px;
     background: url("../images/footer/txt.svg") no-repeat 50% 0;
-    background-size: 661px 18px;
+    background-size: 637px 24px;
     text-indent: -9999em;
 }
 .footer .inner {
