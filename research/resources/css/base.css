@@ -10,7 +10,7 @@
 /* reset
 --------------------------------------------- */
 
-article,aside,details,figcaption,figure,footer,header,menu,nav,section,main { 
+article,aside,details,figcaption,figure,footer,header,menu,nav,section,main {
     display:block;
 }
 article,aside,details,figcaption,figure,footer,header,menu,nav,section,main,
@@ -80,7 +80,7 @@ a:hover {
 }
 
 /*===================================
-	layout	
+	layout
 =====================================*/
 body {
     min-width: 1160px;
@@ -95,7 +95,7 @@ body {
 }
 
 /*===================================
-	element	
+	element
 =====================================*/
 /*  img
 ---------------------------------*/
@@ -166,6 +166,9 @@ a:hover img,
     text-align: center;
     text-decoration: none;
     cursor: pointer;
+}
+a.contactBtn.btn {
+    color: #ffffff !important;
 }
 
 /*===================================
@@ -292,7 +295,7 @@ a:hover img,
 }
 
 /*===================================
-	cont	
+	cont
 =====================================*/
 /*  cont__header
 ---------------------------------*/
@@ -676,7 +679,7 @@ a:hover img,
     margin: 0 auto 30px;
     background-image: url("../images/flow/txt1.svg");
     background-size: 778px 30px;
-} 
+}
 .flow__sec img[src$=".svg"] {
     width: 860px;
     margin: auto auto 45px;
@@ -687,7 +690,7 @@ a:hover img,
     margin: 0 auto 67px;
     background-image: url("../images/flow/txt2.svg");
     background-size: 554px 119px;
-} 
+}
 
 /*  footer
 ---------------------------------*/
@@ -746,10 +749,10 @@ a:hover img,
 }
 
 /************************************************************************************
-smaller than 750px 
+smaller than 750px
 *************************************************************************************/
 @media screen and (max-device-width: 750px) {
-	
+
 	.hiddenPc,
 	.brkSp {
 		display: block;
@@ -758,17 +761,17 @@ smaller than 750px
 	.brkPc {
 		display: none;
 	}
-	
+
 	/*===================================
 		font
 	=====================================*/
-	
+
 	body {
 		font-size: 22px;
 	}
-	
+
 	/*===================================
-		layout	
+		layout
 	=====================================*/
     body {
         min-width: inherit;
@@ -778,9 +781,9 @@ smaller than 750px
 		width: 750px;
         padding: 0 25px;
 	}
-	
+
 	/*===================================
-		element	
+		element
 	=====================================*/
     /*  transition / opacity
     ---------------------------------*/
@@ -791,7 +794,7 @@ smaller than 750px
     .btn:hover {
         opacity: 1;
     }
-    
+
     /*  sec__ttl
     ---------------------------------*/
     .sec__ttl {
@@ -808,13 +811,13 @@ smaller than 750px
         margin-bottom: 30px;
         font-size: 26px;
     }
-    
+
     /*  お問い合わせ
     ---------------------------------*/
     .btn {
         font-size: 28px;
     }
-    
+
 	/*===================================
         global
     =====================================*/
@@ -836,7 +839,7 @@ smaller than 750px
     .global__header img[src$=".svg"].logo_Gunosy {
         width: 120px;
     }
-    
+
     /*  global__header
     ---------------------------------*/
 	.global__footer {
@@ -844,7 +847,7 @@ smaller than 750px
         line-height: 100px;
         font-size: 26px;
     }
-    
+
     /*  privacy / contact / moadlCont
     ---------------------------------*/
     .privacy__modal.moadlCont iframe {
@@ -871,14 +874,14 @@ smaller than 750px
         height: 6px;
         border-radius: 3px;
     }
-    
+
 	/*===================================
-        cont	
+        cont
     =====================================*/
     .cont {
         overflow: hidden;
     }
-    
+
     /*  cont__header
     ---------------------------------*/
     .cont__header {
@@ -897,7 +900,7 @@ smaller than 750px
         height: 20px;
         background-size: 250px 20px;
     }
-    
+
     /*  OUTLINE
     ---------------------------------*/
     .outline__sec .ti1 {
@@ -972,7 +975,7 @@ smaller than 750px
     .outline__sec .ti11 {
         margin: auto auto 150px;
     }
-    
+
     /*  FEATURE
     ---------------------------------*/
     .feature__sec {
@@ -984,7 +987,7 @@ smaller than 750px
     .feature__list li:nth-of-type(2) {
         margin: 0 0 50px 50px;
     }
-    
+
     /*  CASE STUDIES
     ---------------------------------*/
     .case__sec {
@@ -1033,7 +1036,7 @@ smaller than 750px
     .data__list.wd dt,.data__list.wd dd {
         margin-bottom: 0.8em;
     }
-	
+
     /*  SERVICE FLOW
     ---------------------------------*/
     .flow__sec .ti1 {
@@ -1042,11 +1045,11 @@ smaller than 750px
         margin: 0 auto 40px;
         background-image: url("../images/flow/txt1_sp.svg");
         background-size: 436px 72px;
-    } 
+    }
     .flow__sec img[src$=".svg"] {
         width: 700px;
     }
-    
+
     /*  footer
     ---------------------------------*/
     .footer {

@@ -10,7 +10,7 @@
 /* reset
 --------------------------------------------- */
 
-article,aside,details,figcaption,figure,footer,header,menu,nav,section,main { 
+article,aside,details,figcaption,figure,footer,header,menu,nav,section,main {
     display:block;
 }
 article,aside,details,figcaption,figure,footer,header,menu,nav,section,main,
@@ -80,7 +80,7 @@ a:hover {
 }
 
 /*===================================
-	layout	
+	layout
 =====================================*/
 body {
     min-width: 1160px;
@@ -94,7 +94,7 @@ body {
 }
 
 /*===================================
-	element	
+	element
 =====================================*/
 /*  img
 ---------------------------------*/
@@ -135,6 +135,9 @@ a:hover img,
     background-size: 159px auto;
 }
 
+a.contactBtn.btn {
+    color: #ffffff !important;
+}
 /*===================================
 	global
 =====================================*/
@@ -256,7 +259,7 @@ a:hover img,
 }
 
 /*===================================
-	cont	
+	cont
 =====================================*/
 /*  cont__header
 ---------------------------------*/
@@ -783,10 +786,10 @@ a:hover img,
 
 
 /************************************************************************************
-smaller than 750px 
+smaller than 750px
 *************************************************************************************/
 @media screen and (max-device-width: 750px) {
-	
+
 	.hiddenPc,
 	.brkSp {
 		display: block;
@@ -795,17 +798,17 @@ smaller than 750px
 	.brkPc {
 		display: none;
 	}
-	
+
 	/*===================================
 		font
 	=====================================*/
-	
+
 	body {
 		font-size: 22px;
 	}
-	
+
 	/*===================================
-		layout	
+		layout
 	=====================================*/
     body {
         min-width: inherit;
@@ -813,9 +816,9 @@ smaller than 750px
 	.inner {
 		width: 750px;
 	}
-	
+
 	/*===================================
-		element	
+		element
 	=====================================*/
     /*  transition / opacity
     ---------------------------------*/
@@ -826,14 +829,14 @@ smaller than 750px
     .btn:hover {
         opacity: 1;
     }
-    
+
     /*  btn
     ---------------------------------*/
     .btn {
         height: 120px;
         background-position: 48px 46px;
     }
-    
+
 	/*===================================
         global
     =====================================*/
@@ -854,7 +857,7 @@ smaller than 750px
     .global__header img[src$=".svg"].logo_Gunosy {
         width: 120px;
     }
-    
+
     /*  global__header
     ---------------------------------*/
 	.global__footer {
@@ -862,7 +865,7 @@ smaller than 750px
         line-height: 100px;
         font-size: 26px;
     }
-    
+
     /*  privacy / contact / moadlCont
     ---------------------------------*/
     .privacy__modal.moadlCont iframe {
@@ -886,14 +889,14 @@ smaller than 750px
         height: 6px;
         border-radius: 3px;
     }
-    
+
 	/*===================================
-        cont	
+        cont
     =====================================*/
     .cont {
         overflow: hidden;
     }
-    
+
     /*  cont__header
     ---------------------------------*/
     .cont__header {
@@ -925,7 +928,7 @@ smaller than 750px
     .cont__header p + .btn {
         margin-top: 45px;
     }
-	
+
 	/*  グッテレの特徴
     ---------------------------------*/
     .chara__sec {
@@ -964,7 +967,7 @@ smaller than 750px
     .chara__list h3 {
         font-size: 32px;
     }
-    
+
     /*  こんなシーンに駆けつけます
     ---------------------------------*/
     .scene__sec {
@@ -1008,7 +1011,7 @@ smaller than 750px
         margin-bottom: 35px;
         font-size: 28px;
     }
-    
+
     /*  サービス利用の流れ
     ---------------------------------*/
     .flow__sec {
@@ -1064,7 +1067,7 @@ smaller than 750px
         width: 620px;
         margin: 30px 0 0 80px
     }
-    
+
     /*  ご利用プラン
     ---------------------------------*/
     .plan__sec {
@@ -1114,7 +1117,7 @@ smaller than 750px
         width: 80px;
         height: 80px;
     }
-    
+
     /*  Q&A
     ---------------------------------*/
     .faq__sec {
@@ -1136,7 +1139,7 @@ smaller than 750px
         font-size: 28px;
         line-height: 1.6;
     }
-    
+
     /*  バナー
     ---------------------------------*/
     .banner p a {
@@ -1151,7 +1154,7 @@ smaller than 750px
         margin: -4px 0 0 7px;
         background-size: 20px 20px;
     }
-    
+
     /*  footer
     ---------------------------------*/
     .footer {
