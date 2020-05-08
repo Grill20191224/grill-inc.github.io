@@ -1,0 +1,653 @@
+@charset "utf-8";
+/*!
+ * base CSS
+ * ---------------------------------------------
+ * 共通レイアウトに関わるCSS
+ */
+@import url('//fonts.googleapis.com/css?family=Noto+Sans+JP:100,300,400,500,700,900');
+
+
+/* reset
+--------------------------------------------- */
+
+article,aside,details,figcaption,figure,footer,header,menu,nav,section,main { 
+    display:block;
+}
+article,aside,details,figcaption,figure,footer,header,menu,nav,section,main,
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+fieldset,img {
+	border: 0;
+}
+* {
+	font-size:100%;
+	max-height: 999999px;
+}
+body {
+	font: 100%/1 'Noto Sans JP', sans-serif;
+}
+h1,h2,h3,h4,h5,h6,b {
+	font-weight: 600;
+}
+ol,ul,li {
+  list-style: none;
+}
+ul,ol {
+	letter-spacing: -.40em;
+}
+ul > li,ol > li {
+	letter-spacing: normal;
+}
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+*:before,*:after {
+	content: "";
+	display: none;
+}
+html {
+	-webkit-text-size-adjust: 100%;
+}
+input,textarea,select {
+	-webkit-appearance: none;
+    -webkit-border-radius: 0;
+}
+.hiddenPc,
+.brkSp {
+	display: none;
+}
+.brkPc {
+	display: block;
+}
+
+/*===================================
+	font link
+=====================================*/
+body,
+a,a:visited {
+	color: #333;
+}
+body {
+	font-size: 16px;
+}
+a:hover {
+	text-decoration: none;
+}
+
+/*===================================
+	layout	
+=====================================*/
+body {
+    min-width: 1160px;
+    padding-top: 140px;
+	background-color: #fff;
+}
+
+.inner {
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*===================================
+	element	
+=====================================*/
+/*  img
+---------------------------------*/
+img[src$=".svg"] {
+    height: auto;
+}
+.txt_img {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    text-align: left;
+    text-indent: -9999em;
+}
+
+/*  transition / opacity
+---------------------------------*/
+a,a img,.btn {
+    transition: .5s;
+}
+a:hover img,
+.btn:hover {
+	opacity: .7;
+}
+
+
+
+/*  お問い合わせ
+---------------------------------*/
+.btn {
+    display: block;
+    width: 650px;
+    height: 80px;
+    line-height: 80px;
+    margin: auto auto 5px;
+    background: #0D1031;
+    background-size: 542px auto;
+    box-shadow: 3px 3px 3px 0px rgba(0,0,0,.16);
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*===================================
+	global
+=====================================*/
+/*  global__header
+---------------------------------*/
+.global__header {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 90px;
+    border-bottom: solid 1px #707070;
+    background: #fff;
+}
+.global__header a {
+    display: inline-block;
+    position: absolute;
+}
+.global__header a:nth-of-type(1) {
+    top: 12px;
+    left: 21px;
+}
+.global__header a:nth-of-type(2) {
+    top: 10px;
+    right: 22px;
+}
+.global__header img[src$=".svg"].logo_grill {
+    width: 79px;
+}
+.global__header img[src$=".svg"].logo_Gunosy {
+    width: 101px;
+}
+
+/*  global__footer
+---------------------------------*/
+.global__footer {
+    position: relative;
+    height: 67px;
+    line-height: 67px;
+    background: #fff;
+    font-size: 11px;
+    font-weight: bold;
+}
+.global__footer,.global__footer a {
+    color: #0d1031;
+}
+.global__footer nav,.copy {
+    position: absolute;
+}
+.global__footer nav {
+    left: 25px;
+}
+.copy {
+    right: 20px;
+}
+
+/*  privacy / contact / moadlCont
+---------------------------------*/
+.moadlBtn {
+    cursor: pointer;
+}
+.privacyBtn.moadlBtn:hover {
+    text-decoration: underline;
+}
+.moadlCont {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 50%;
+	left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+	-webkit-transform: translateY(-50%) translateX(-50%);
+    margin: auto;
+    box-shadow: 0 0 100em 100em #eee;
+}
+.privacy__modal.moadlCont {
+    overflow-y: auto;
+    background: #0d1031;
+}
+.privacy__modal.moadlCont iframe {
+    width: 1020px;
+    height: calc(100vh - 100px);
+}
+.contact__modal.moadlCont {
+    overflow-y: inherit;
+    background: #fff;
+}
+.contact__modal.moadlCont iframe {
+    width: 800px;
+    height: 635px;
+}
+.clsBtn {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 34px;
+    height: 34px;
+    cursor: pointer;
+}
+.clsBtn:before,.clsBtn:after {
+    display: block;
+    position: absolute;
+    top: 8px;
+    right: -4px;
+    width: 34px;
+    height: 3px;
+    border-radius: 2px;
+    background: #fff;
+    cursor: pointer;
+}
+.clsBtn:before {
+    transform: rotate(45deg);
+}
+.clsBtn:after {
+    transform: rotate(-45deg);
+}
+.contact__modal .clsBtn:before,.contact__modal .clsBtn:after {
+    background: #666;
+}
+
+/*===================================
+	cont	
+=====================================*/
+/*  cont__header
+---------------------------------*/
+.cont__header {
+    margin-bottom: 68px;
+}
+.cont__header p {
+    margin-top: 1em;
+    color: #999;
+    text-align: right;
+}
+
+/*  sec
+---------------------------------*/
+.sec {
+    margin-bottom: 100px;
+    font-size: 18px;
+}
+
+/*  sec__ttl / text
+---------------------------------*/
+.ttl {
+    margin-bottom: 1em;
+    font-size: 28px;
+    line-height: 1.6;
+}
+.sec__ttl {
+    height: auto;
+    margin: 80px 0 40px;
+    padding: 15px;
+    /*border: solid 2px #eee;*/
+    background: #0d1031;
+    color: #fff;
+    font-size: 24px;
+    line-height: 1.6;
+}
+.sec__ttl a {
+    color: #fff;
+}
+.sec p {
+    margin-bottom: 2em;
+    line-height: 1.8;
+}
+
+
+/*  summary__list
+---------------------------------*/
+.summary__list,.sec__footer {
+    overflow: hidden;
+    padding: 50px;
+    border: solid 2px #eee;
+    margin: 2em 0;
+    line-height: 1.8;
+}
+.summary__list dt,.summary__list dt + dd {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 1em;
+}
+.summary__list dt {
+    width: 15em;
+    color: #999;
+}
+.summary__list dt + dd {
+    position: relative;
+    width: calc( 100% - 16em );
+}
+.summary__list dt + dd:before {
+    content: ":";
+    display: block;
+    position: absolute;
+    margin: 0 0 0 -10px;
+}
+.sec h4 {
+    margin: 3em 0 1em;
+    font-size: 20px;
+    text-align: center;
+}
+.sec figure {
+    margin-bottom: 2em;
+    text-align: center;
+}
+.sec figcaption {
+    margin-top: 0.5em;
+    line-height: 1.4;
+    text-align: center;
+}
+.sec figure li {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 20px 20px 0;
+}
+.sec__footer h4 {
+    margin: 2.3em 0 1em;
+    font-size: 20px;
+    text-align: left;
+}
+.sec__footer h4:nth-of-type(1) {
+    margin-top: 0;
+}
+.item__list {
+    line-height: 1.8;
+}
+.item__list dt {
+    margin-top: 2em;
+}
+.item__list dt span {
+    color: #999;
+}
+.sec h4.alnl,
+.alnl {
+    text-align: left;
+}
+
+@media screen and (min-device-width: 751px) {
+    .sec figure .three li {
+        width: calc( (100% - 40px ) / 3);
+    }
+    .sec figure .three li:nth-of-type(3n) {
+        margin-right: 0;
+    }
+    .sec figure .two li {
+        width: calc( (100% - 20px ) / 2);
+    }
+    .sec figure .two li:nth-of-type(2n) {
+        margin-right: 0;
+    }
+    .summary__list .brkPc {
+        display: inline-block;
+    }
+}
+
+/*  footer
+---------------------------------*/
+.footer {
+    padding: 55px 0 80px;
+    background: #0d1031;
+    color: #fff;
+}
+.footer h2 {
+    width: 503px;
+    height: 32px;
+    margin: 0 auto 100px;
+    background: url("../images/footer/title.svg") no-repeat 50% 0;
+    background-size: 503px 32px;
+    text-indent: -9999em;
+}
+.footer .inner {
+    position: relative;
+}
+.footer figure {
+    position: absolute;
+    top: 145px;
+    right: 56px;
+    width: 260px;
+    height: 160px;
+    padding-top: 52px;
+    background: #fff;
+}
+.footer figure img[src$=".svg"] {
+    width: 164px;
+    margin: auto;
+}
+.companyOutline__list {
+    width: 32em;
+    margin-left: 55px;
+}
+.companyOutline__list dt,.companyOutline__list dd {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 1.6em;
+    font-size: 14px;
+}
+.companyOutline__list dt {
+    width: 6em;
+}
+.companyOutline__list dd {
+    width: 25em;
+}
+
+/************************************************************************************
+smaller than 750px 
+*************************************************************************************/
+@media screen and (max-device-width: 750px) {
+	
+	.hiddenPc,
+	.brkSp {
+		display: block;
+	}
+	.hiddenSp,
+	.brkPc {
+		display: none;
+	}
+	
+	/*===================================
+		font
+	=====================================*/
+	
+	body {
+		font-size: 22px;
+	}
+	
+	/*===================================
+		layout	
+	=====================================*/
+    body {
+        min-width: inherit;
+        padding-top: 130px;
+    }
+	.inner {
+		width: 750px;
+        padding: 0 25px;
+	}
+	
+	/*===================================
+		element	
+	=====================================*/
+    /*  transition / opacity
+    ---------------------------------*/
+    a,a img,.btn {
+        transition: inherit;
+    }
+    a:hover img,
+    .btn:hover {
+        opacity: 1;
+    }
+    
+    /*  お問い合わせ
+    ---------------------------------*/
+    .btn {
+        font-size: 28px;
+    }
+    
+	/*===================================
+        global
+    =====================================*/
+    /*  global__header
+    ---------------------------------*/
+    .global__header {
+        height: 70px;
+    }
+    .global__header a:nth-of-type(1) {
+        top: 17px;
+    }
+    .global__header a:nth-of-type(2) {
+        top: 15px;
+    }
+    .global__header img[src$=".svg"].logo_grill {
+        width: 94px;
+    }
+    .global__header img[src$=".svg"].logo_Gunosy {
+        width: 120px;
+    }
+
+    /*  global__header
+    ---------------------------------*/
+	.global__footer {
+        height: 100px;
+        line-height: 100px;
+        font-size: 26px;
+    }
+    
+    /*  privacy / contact / moadlCont
+    ---------------------------------*/
+    .privacy__modal.moadlCont iframe {
+        width: 690px;
+       height: calc(100vh - 200px);
+    }
+    .contact__modal.moadlCont {
+	    overflow-y: inherit;
+    }
+    .contact__modal.moadlCont iframe {
+        width: 690px;
+        height: 760px;
+    }
+    .clsBtn {
+        top: 28px;
+        right: 28px;
+        width: 68px;
+        height: 68px;
+    }
+    .clsBtn:before,.clsBtn:after {
+        top: 20px;
+        right: -8px;
+        width: 68px;
+        height: 6px;
+        border-radius: 3px;
+    }
+    
+	/*===================================
+        cont	
+    =====================================*/
+    .cont {
+        overflow: hidden;
+    }
+    
+    /*  cont__header
+    ---------------------------------*/
+    .cont__header {
+        margin-bottom: 75px;
+    }
+    
+    /*  sec
+    ---------------------------------*/
+    .sec {
+        font-size: 26px;
+    }
+    
+    /*  sec__ttl
+    ---------------------------------*/
+    .ttl {
+        font-size: 38px;
+    }
+    .sec__ttl {
+        font-size: 28px;
+    }
+    
+    .summary__list,.sec__footer {
+        padding: 60px;
+    }
+    .summary__list dt,.item__list dt + dd {
+        display: block;
+    }
+    .summary__list dt,.sec__footer dt span {
+        width: auto;
+        margin-bottom: 0.5em;
+        font-weight: bold;
+    }
+    .summary__list dt + dd {
+        width: auto;
+    }
+    .summary__list dt + dd,.summary__list dd {
+        margin-bottom: 2em;
+    }
+    .summary__list dt + dd:before {
+        display: none;
+    }
+    .item__list dt {
+        margin-bottom: 0.5em;
+    }
+    .sec h4,.sec__footer h4 {
+        font-size: 28px;
+    }
+    .sec figure {
+        text-align: left;
+    }
+    .sec figure .three li {
+        width: calc( (100% - 20px ) / 2);
+    }
+    .sec figure .three li:nth-of-type(2n) {
+        margin-right: 0;
+    }
+    .sec figure .two li {
+        width: 100%;
+    }
+    .sec figure .two li:nth-of-type(2n) {
+        margin-right: 0;
+    }
+    .sec figcaption {
+        font-size: 22px;
+    }
+    
+    /*  footer
+    ---------------------------------*/
+    .footer {
+        padding: 60px 0 80px;
+
+    }
+    .footer figure {
+        position: relative;
+        top: inherit;
+        right: inherit;
+        margin: 30px auto 50px;
+    }
+    .footer figure img[src$=".svg"] {
+        width: 164px;
+        margin: auto;
+    }
+    .companyOutline__list {
+        margin-left: 55px;
+    }
+    .companyOutline__list dt,.companyOutline__list dd {
+        font-size: 22px;
+    }
+
+}
