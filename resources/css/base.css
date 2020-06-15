@@ -487,12 +487,14 @@ main > section#SecHome {
 =====================================*/
 #SecAsideContent {
     min-width: 1120px;
-    padding: 44px 0;
+    padding: 44px 0 24px;
     border-bottom: solid 1px #ccc;
     text-align: center;
 }
 .content__list {
+    width: 1000px;
     margin: auto;
+    text-align: left;
 }
 .content__list li {
     display: inline-block;
@@ -500,11 +502,10 @@ main > section#SecHome {
     position: relative;
     width: 480px;
     height: 151px;
-    margin: 0 10px;
+    margin: 0 10px 20px;
     padding: 40px 0 40px 34px;
     box-shadow: 2px 2px 0 0 rgba(0,0,0,.16);
     letter-spacing: -.40em;
-    text-align: left;
 }
 .content__list li.contentGutele {
     background: #EBE42C;
@@ -562,7 +563,10 @@ main > section#SecHome {
 .content__list p br {
     display: inline-block;
 }
-
+.content__list p span {
+    
+    letter-spacing: normal;
+}
 /*===================================
     ABOUT US
 =====================================*/
@@ -608,6 +612,10 @@ main > section#SecHome {
 }
 #SecStrength p strong:nth-of-type(2) img[src$=".svg"] {
     width: 322px;
+}
+#SecStrength p strong:nth-of-type(2) img[src$=".png"] {
+    width: 380px;
+    margin-left: -20px;
 }
 #SecStrength p strong:nth-of-type(1):after,
 #SecStrength p strong:nth-of-type(2):before {
@@ -1252,6 +1260,9 @@ smaller than 750px
         min-width: inherit;
         padding: 60px 0 20px;
     }
+    .content__list {
+        width: auto;
+    }
     .content__list li {
         display: block;
         width: 650px;
@@ -1314,6 +1325,10 @@ smaller than 750px
         margin: 0 auto 80px;
     }
     #SecStrength p strong:nth-of-type(2) img[src$=".svg"] {
+        width: 480px;
+        margin: 80px auto 0;
+    }
+    #SecStrength p strong:nth-of-type(2) img[src$=".png"] {
         width: 480px;
         margin: 80px auto 0;
     }
