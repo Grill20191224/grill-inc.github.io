@@ -458,7 +458,40 @@ a.contactBtn.btn {
     line-height: 1.6;
     font-weight: bold;
 }
-.scene__list + p {
+.check__sns {
+    margin: 60px 0 80px;
+    text-align: center;
+}
+.check__sns p {
+    margin-bottom: .8em;
+    color: #E0DA41;
+    font-size: 30px;
+    font-weight: bold;
+}
+.check__sns li {
+    display: inline-block;
+    vertical-align: middle;
+}
+.check__sns li:nth-of-type(1) {
+    margin-right: 15px;
+}
+.check__sns li a {
+    display: block;
+    width: 388px;
+    height: 61px;
+    line-height: 60px;
+    background: #E0DA41;
+    box-shadow: 3px 3px 2px 0 rgba(0,0,0,.16);
+    color: #0D1031;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: .5s;
+}
+.check__sns li a:hover {
+    opacity: .7;
+}
+.check__sns + p {
     margin-bottom: 25px;
     font-size: 20px;
     text-align: center;
@@ -564,6 +597,7 @@ a.contactBtn.btn {
     border: solid 2px #0d1031;
     background: #fff;
     text-align: center;
+    line-height: 1.6;
 }
 .plan__tbl th,.plan__tbl td {
     width: calc( 100% / 6 );
@@ -1007,7 +1041,28 @@ smaller than 750px
     .scene__list p {
         font-size: 18px;
     }
-    .scene__list + p {
+    .check__sns {
+        margin: 60px 0 100px;
+    }
+    .check__sns p {
+        margin-bottom: 1em;
+        font-size: 36px;
+    }
+    .check__sns li:nth-of-type(1) {
+        margin-right: 20px;
+    }
+    .check__sns li a {
+        width: 310px;
+        height: auto;
+        padding: .5em 0;
+        line-height: 1.4;
+        font-size: 24px;
+        transition: inherit;
+    }
+    .check__sns li a:hover {
+        opacity: 1;
+    }
+    .check__sns + p {
         margin-bottom: 35px;
         font-size: 28px;
     }
