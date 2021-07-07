@@ -157,7 +157,7 @@ jQuery(function($){
         //*-- google map api --------------------------------*
          jQuery(document).ready(function($){
             function map_initialize() {
-                var latlng = new google.maps.LatLng(35.667113, 139.740135);
+                var latlng = new google.maps.LatLng(35.66592686589819, 139.70376720058852);
                 var map = new google.maps.Map(
                     document.getElementById("OfficeMap"),
                     {
