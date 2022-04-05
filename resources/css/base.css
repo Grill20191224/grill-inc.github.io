@@ -741,7 +741,7 @@ div.aside__cont:before {
     letter-spacing: -.40em;
     width: 500px;
     margin-top: 105px;
-    padding: 46px 50px 38px;
+    padding: 46px 45px 38px 50px;
     background: #e0da41;
     color: #333;
     font-size: 0;
@@ -755,11 +755,11 @@ div.aside__cont:before {
     font-size: 13px;
 }
 .outline__list dt {
-    width: 130px;
+    width: 125px;
     font-weight: bold;
 }
 .outline__list dd {
-    width: 270px;
+    width: 280px;
     margin-bottom: 1.4em;
 }
 .outline__list dd:nth-last-of-type(1) {
